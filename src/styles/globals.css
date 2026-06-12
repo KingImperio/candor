@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  background: #242628;
+  color: #e8e4df;
+  min-height: 100vh;
+}
+
+@keyframes candor-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.candor-loading-bar {
+  width: 200px;
+  height: 3px;
+  border-radius: 2px;
+  background: #8b2635;
+  animation: candor-pulse 1.5s ease-in-out infinite;
+}
